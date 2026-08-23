@@ -1,0 +1,2 @@
+epoch=10  total=4.834978e-01  data=4.834978e-01  eqns=4.507623e+00
+epoch=20  total=5.305296e-01  data=5.305296e-01  eqns=5.425174e+00
