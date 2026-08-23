@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# TensorFlow
+*.tfevents.*
+*.h5
+*.weights.h5
+
+# Logs
+logs/
+*.log
+
+# Data
+Data/
+
+# Weights
+weights/
+
+# Documentation build outputs
+docs/_build/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+venv/
+conda_env/
