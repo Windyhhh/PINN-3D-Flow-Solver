@@ -58,6 +58,14 @@ PINN-3D-Flow-Solver/
 
 ---
 
+
+## Results
+
+<div align="center">
+  <img src="weights/Isotropicflow_loss.png" alt="PINN loss curve" width="70%"/>
+</div>
+
+---
 ## License
 
 MIT — free to use, modify and distribute.
