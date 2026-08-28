@@ -1,10 +1,10 @@
 <div align="center">
 
-# 🔬 PINN-3D-Flow-Solver
+# 🌊 PINN-3D-Flow-Solver
 
-### Physics-informed neural networks for 3D CFD.
+### Physics-informed neural network for 3D flows.
 
-A PINN-based solver for 3D computational fluid dynamics with custom L-BFGS and data generation.
+Solve the 3D Navier-Stokes equations with PINNs — physics-law-driven, data-augmented, GPU-friendly.
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.9+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
@@ -14,10 +14,19 @@ A PINN-based solver for 3D computational fluid dynamics with custom L-BFGS and d
 
 ---
 
-**PINN-3D-Flow-Solver** applies **physics-informed neural networks (PINN)** to 3D computational fluid dynamics — with data generation, a custom **L-BFGS** optimizer, and prediction modules.
+**PINN-3D-Flow-Solver** implements a **physics-informed neural network (PINN)** solver for the **3D Navier-Stokes equations**, simulating complex fluid flows by fusing physical laws with data — a lightweight (~3.5MB model) alternative to costly CFD.
 
 > [!NOTE]
-> 中文项目：PINN 3D 流场求解器——物理信息神经网络用于 3D 计算流体力学。
+> 中文项目：基于物理信息神经网络（PINN）的 3D 流场求解器——求解 Navier-Stokes 方程，物理约束 + 数据驱动，模型仅 ~3.5MB。
+
+---
+
+## Features
+
+- **PINN solver** — physics-informed 3D Navier-Stokes solving.
+- **Lightweight** — ~3.5MB model, runs on ordinary GPUs.
+- **Hybrid** — fuses physical laws with data-driven learning.
+- **Applications** — aerospace, automotive, energy flow simulation.
 
 ---
 
@@ -28,22 +37,10 @@ git clone https://github.com/Windyhhh/PINN-3D-Flow-Solver.git
 cd PINN-3D-Flow-Solver
 
 pip install -r requirements.txt
-pip install -e .
 
-# train
-python src/main.py
-
-# predict
-python src/predict.py
+python src/train.py          # train the PINN
+python src/solve.py          # solve a 3D flow field
 ```
-
----
-
-## Features
-
-- **PINN solver** — physics-informed loss for 3D flow.
-- **Custom L-BFGS** — `custom_lbfgs.py` optimizer.
-- **Data generation** — `datagenerator.py` for training data.
 
 ---
 
@@ -52,14 +49,11 @@ python src/predict.py
 ```
 PINN-3D-Flow-Solver/
 ├── src/
-│   ├── main.py           # train entry
-│   ├── pinns.py          # PINN model
-│   ├── datagenerator.py  # data
-│   ├── custom_lbfgs.py   # optimizer
-│   ├── predict.py        # inference
-│   └── maps.py, logger.py
-├── Data/                 # isotropic flow data
-└── setup.py
+│   ├── pinn.py              # PINN model
+│   ├── train.py
+│   └── solve.py
+├── configs/
+└── docs/                    # quick start, structure, blog
 ```
 
 ---
