@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌊 PINN-3D-Flow-Solver
+# 物理信息神经网络 3D 流场求解器 | PINN-3D-Flow-Solver
 
 ### Physics-informed neural network for 3D flows.
 
